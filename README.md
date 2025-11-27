@@ -17,6 +17,7 @@ Matplotlib - Visualizações
 Scikit-learn - Pré-processamento
 
 Arquiterura do Modelo:
+
 <img width="655" height="128" alt="image" src="https://github.com/user-attachments/assets/d7504197-71d8-4f91-8d8d-1d4a0f4f9d1a" />
 
 
