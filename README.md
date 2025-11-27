@@ -31,3 +31,6 @@ COMO USAR:
 Como escolher o ativo que mais me intereça:
 Altere o ticker para o ativo de sua escolha(EX:JPM(Jp Morgan Chase & Co), PETR4(Petrobras), PLTR(Palantir), AAPL(Apple), AMZN(Amazon)
 
+<img width="461" height="112" alt="image" src="https://github.com/user-attachments/assets/956158fb-e2e0-4520-a239-fcfa0617bb40" />
+
+
