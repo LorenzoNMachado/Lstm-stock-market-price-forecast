@@ -25,9 +25,11 @@ Arquiterura do Modelo:
 
 
 COMO USAR:
-1. Instale as bibliotecas:
-  pip install tensorflow yfinance pandas numpy matplotlib scikit-learn
-2. python stock_forecast.py
+1. Instale o arquivo mais atualizada e coloque ela no jupyter notebook
+2. Instalação das Dependência:
+pip install tensorflow yfinance pandas numpy matplotlib
+3. Execução
+Execute a célula completa
 Como escolher o ativo que mais me intereça:
 Altere o ticker para o ativo de sua escolha(EX:JPM(Jp Morgan Chase & Co), PETR4(Petrobras), PLTR(Palantir), AAPL(Apple), AMZN(Amazon)
 
