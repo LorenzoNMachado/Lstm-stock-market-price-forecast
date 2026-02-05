@@ -62,15 +62,19 @@ Certifique-se de ter um ambiente **Jupyter Notebook** ou **Google Colab** pronto
 Execute o comando abaixo no terminal ou em uma célula do notebook:
 
 pip install tensorflow yfinance pandas numpy matplotlib scikit-learn
-###3. Execução
+
+### 3. Execução
+
 Baixe o arquivo .ipynb mais recente deste repositório.
 
 Execute todas as células sequencialmente.
 
-###4. Personalização (Troca de Ativo)
+### 4. Personalização (Troca de Ativo)
+
 Para analisar uma empresa diferente, altere a variável ticker no início do código. Você pode usar códigos da NASDAQ, NYSE ou B3 (ex: PETR4.SA para Petrobras).
 
-##Resultados
+## Resultados
+
 Graças ao uso de Log-Returns, o modelo demonstra uma continuidade orgânica entre o histórico real e a projeção futura. Essa abordagem mitiga o erro de propagação comum em modelos recursivos simples, gerando uma curva de previsão estatisticamente mais estável e visualmente integrada.
 
 👤 Autor
