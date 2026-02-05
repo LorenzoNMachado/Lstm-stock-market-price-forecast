@@ -47,3 +47,10 @@ Para analisar uma empresa diferente, altere a variável ticker no início do có
 
 ##Resultados
 Graças ao uso de Log-Returns, o modelo demonstra uma continuidade orgânica entre o histórico real e a projeção futura. Essa abordagem mitiga o erro de propagação comum em modelos recursivos simples, gerando uma curva de previsão estatisticamente mais estável e visualmente integrada.
+
+👤 Autor
+Lorenzo Nakayama Machado
+
+Graduando em Ciência da Computação pela Pontifícia Universidade Católica do Paraná (PUCPR).
+
+Interesse em IA, Ciência de Dados e Desenvolvimento Python.
