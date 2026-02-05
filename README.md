@@ -16,7 +16,8 @@ Blindagem contra Data Leakage: O escalonamento de dados (MinMaxScaler) é ajusta
 Arquitetura do Modelo
 O projeto utiliza uma arquitetura LSTM empilhada com camadas de Dropout para mitigar o overfitting:
 
-<img width="655" height="128" alt="Arquitetura do Modelo" src="https://github.com/user-attachments/assets/d7504197-71d8-4f91-8d8d-1d4a0f4f9d1a" />
+<img width="821" height="225" alt="image" src="https://github.com/user-attachments/assets/3640a1d2-0930-4f59-92ea-af6e9ca9c363" />
+
 
 Tecnologias Utilizadas
 Python 3
@@ -49,7 +50,7 @@ Execute todas as células sequencialmente.
 4. Personalização (Troca de Ativo)
 Para analisar uma empresa diferente, altere a variável ticker no início do código. Você pode usar códigos da NASDAQ, NYSE ou B3 (ex: PETR4.SA para Petrobras).
 
-<img width="461" height="112" alt="Seleção de Ticker" src="https://github.com/user-attachments/assets/956158fb-e2e0-4520-a239-fcfa0617bb40" />
+<img width="582" height="70" alt="image" src="https://github.com/user-attachments/assets/5142b663-d9fe-4857-aad9-ff450270081f" />
 
 Resultados
 Graças ao uso de Log-Returns, o modelo demonstra uma continuidade orgânica entre o histórico real e a projeção futura. Essa abordagem mitiga o erro de propagação comum em modelos recursivos simples, gerando uma curva de previsão estatisticamente mais estável e visualmente integrada.
