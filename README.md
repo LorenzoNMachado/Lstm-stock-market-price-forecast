@@ -1,40 +1,65 @@
-#Previsão de Preços de Ativos com LSTM (Deep Learning)
-AVISO DE ISENÇÃO DE RESPONSABILIDADE: Este projeto tem finalidade estritamente educacional e de aprendizado. Os resultados e previsões gerados não devem ser utilizados como conselhos financeiros ou recomendações de investimento. Modelos de Machine Learning possuem limitações e riscos significativos.
+# Previsão de Preços de Ativos com LSTM (Deep Learning)
 
-##Objetivo do Projeto
-Este projeto demonstra a implementação de modelos de Deep Learning para a previsão de séries temporais financeiras. O objetivo é projetar o comportamento de um ativo para os próximos 30 dias, utilizando redes neurais recorrentes.
+**AVISO DE ISENÇÃO DE RESPONSABILIDADE:**  
+Este projeto tem finalidade estritamente educacional e de aprendizado.  
+Os resultados e previsões gerados não devem ser utilizados como conselhos financeiros ou recomendações de investimento.  
+Modelos de Machine Learning possuem limitações e riscos significativos.
 
-##Diferenciais Técnicos e Soluções
-Diferente de implementações básicas, este projeto foca na robustez estatística para evitar erros comuns em previsões financeiras:
+---
 
-###Estacionariedade com Log-Returns: O modelo treina sobre variações percentuais logarítmicas em vez de preços brutos. Isso evita que a rede neural apresente instabilidades quando o preço atinge escalas não observadas no treinamento.
+## Objetivo do Projeto
 
-###Previsão Recursiva Dinâmica: Implementação de um loop que projeta um dia por vez. A cada passo, indicadores técnicos como RSI e Médias Móveis (MA7/MA21) são recalculados matematicamente com base na previsão anterior.
+Este projeto demonstra a implementação de modelos de **Deep Learning** para a previsão de **séries temporais financeiras**.  
+O objetivo é projetar o comportamento de um ativo para os **próximos 30 dias**, utilizando **redes neurais recorrentes (LSTM)**.
 
-###Blindagem contra Data Leakage: O escalonamento de dados (MinMaxScaler) é ajustado exclusivamente com os dados de treino, garantindo que informações do futuro não contaminem o aprendizado do modelo.
+---
 
-##Arquitetura do Modelo
-O projeto utiliza uma arquitetura LSTM empilhada com camadas de Dropout para mitigar o overfitting.
+## Diferenciais Técnicos e Soluções
 
-##Tecnologias Utilizadas
-Python 3
+Diferente de implementações básicas, este projeto foca na **robustez estatística** para evitar erros comuns em previsões financeiras.
 
-TensorFlow/Keras: Construção e treinamento da rede neural.
+### Estacionariedade com Log-Returns
 
-yFinance: Coleta de dados reais do mercado em tempo real.
+O modelo treina sobre **variações percentuais logarítmicas (log-returns)** em vez de preços brutos.  
+Isso evita que a rede neural apresente instabilidades quando o preço atinge escalas não observadas no treinamento.
 
-Pandas & NumPy: Manipulação e tratamento de dados.
+### Previsão Recursiva Dinâmica
 
-Matplotlib: Visualização dos históricos e projeções.
+Implementação de um loop que projeta **um dia por vez**.  
+A cada passo, indicadores técnicos como **RSI** e **Médias Móveis (MA7 / MA21)** são recalculados matematicamente com base na previsão anterior.
 
-Scikit-learn: Pré-processamento e normalização.
+### Blindagem contra Data Leakage
 
-##Como Usar
-###1. Preparação
-Certifique-se de ter um ambiente Jupyter Notebook ou Google Colab pronto para uso.
+O escalonamento dos dados (**MinMaxScaler**) é ajustado **exclusivamente com os dados de treino**, garantindo que informações do futuro não contaminem o aprendizado do modelo.
 
-###2. Instalação das Dependências
-Execute o comando abaixo no seu terminal ou célula do notebook:
+---
+
+## Arquitetura do Modelo
+
+O projeto utiliza uma arquitetura **LSTM empilhada**, com camadas de **Dropout** para mitigação de **overfitting**.
+
+---
+
+## Tecnologias Utilizadas
+
+- **Python 3**
+- **TensorFlow / Keras** — construção e treinamento da rede neural
+- **yFinance** — coleta de dados reais do mercado
+- **Pandas & NumPy** — manipulação e tratamento de dados
+- **Matplotlib** — visualização de históricos e projeções
+- **Scikit-learn** — pré-processamento e normalização
+
+---
+
+## Como Usar
+
+### 1. Preparação
+
+Certifique-se de ter um ambiente **Jupyter Notebook** ou **Google Colab** pronto para uso.
+
+### 2. Instalação das Dependências
+
+Execute o comando abaixo no terminal ou em uma célula do notebook:
 
 pip install tensorflow yfinance pandas numpy matplotlib scikit-learn
 ###3. Execução
