@@ -1,38 +1,55 @@
-⚠️Esse projeto é apenas um teste do meu aprendizado e os resultados não devem ser usados como conselhos financeiros ou recomendação de investimento.
+Previsão de Preços de Ativos com LSTM (Deep Learning)
+AVISO DE ISENÇÃO DE RESPONSABILIDADE: Este projeto tem finalidade estritamente educacional e de aprendizado. Os resultados e previsões gerados não devem ser utilizados como conselhos financeiros ou recomendações de investimento. Modelos de Machine Learning possuem limitações e riscos significativos.
 
-Objetivo:
-Este projeto tem como finalidade educacional demonstrar a implementação de modelos de deep learning para previsão do valor de um ativo para os proximos 30 dias, utilizando como estudo de caso a previsão de preços de ações.
+Objetivo do Projeto
+Este projeto demonstra a implementação de modelos de Deep Learning para a previsão de séries temporais financeiras. O objetivo é projetar o comportamento de um ativo para os próximos 30 dias, utilizando redes neurais recorrentes.
 
-Tecnologias Utilizadas:
+Diferenciais Técnicos e Soluções
+Diferente de implementações básicas, este projeto foca na robustez estatística para evitar erros comuns em previsões financeiras:
+
+Estacionariedade com Log-Returns: O modelo treina sobre variações percentuais logarítmicas em vez de preços brutos. Isso evita que a rede neural apresente instabilidades quando o preço atinge escalas não observadas no treinamento.
+
+Previsão Recursiva Dinâmica: Implementação de um loop que projeta um dia por vez. A cada passo, indicadores técnicos como RSI (Índice de Força Relativa) e Médias Móveis (MA7/MA21) são recalculados matematicamente com base na previsão anterior, mantendo a consistência lógica dos dados de entrada.
+
+Blindagem contra Data Leakage: O escalonamento de dados (MinMaxScaler) é ajustado exclusivamente com os dados de treino, garantindo que informações do futuro não contaminem o aprendizado do modelo.
+
+Arquitetura do Modelo
+O projeto utiliza uma arquitetura LSTM empilhada com camadas de Dropout para mitigar o overfitting:
+
+<img width="655" height="128" alt="Arquitetura do Modelo" src="https://github.com/user-attachments/assets/d7504197-71d8-4f91-8d8d-1d4a0f4f9d1a" />
+
+Tecnologias Utilizadas
 Python 3
 
-TensorFlow/Keras - Para construção do modelo LSTM
+TensorFlow/Keras: Construção e treinamento da rede neural.
 
-yFinance - Coleta de dados do mercado
+yFinance: Coleta de dados reais do mercado em tempo real.
 
-Pandas & NumPy - Manipulação de dados
+Pandas & NumPy: Manipulação e tratamento de dados.
 
-Matplotlib - Visualizações
+Matplotlib: Visualização dos históricos e projeções.
 
-Scikit-learn - Pré-processamento
+Scikit-learn: Pré-processamento e normalização.
 
-Arquiterura do Modelo:
+Como Usar
+1. Preparação
+Certifique-se de ter um ambiente Jupyter Notebook ou Google Colab pronto para uso.
 
-<img width="655" height="128" alt="image" src="https://github.com/user-attachments/assets/d7504197-71d8-4f91-8d8d-1d4a0f4f9d1a" />
+2. Instalação das Dependências
+Execute o comando abaixo no seu terminal ou célula do notebook:
 
+Bash
 
-
-
-
-COMO USAR:
-1. Instale o arquivo mais atualizada e coloque ela no jupyter notebook
-2. Instalação das Dependência:
-pip install tensorflow yfinance pandas numpy matplotlib
+pip install tensorflow yfinance pandas numpy matplotlib scikit-learn
 3. Execução
-Execute a célula completa
-Como escolher o ativo que mais me intereça:
-Altere o ticker para o ativo de sua escolha(EX:JPM(Jp Morgan Chase & Co), PETR4(Petrobras), PLTR(Palantir), AAPL(Apple), AMZN(Amazon)
+Baixe o arquivo .ipynb mais recente deste repositório.
 
-<img width="461" height="112" alt="image" src="https://github.com/user-attachments/assets/956158fb-e2e0-4520-a239-fcfa0617bb40" />
+Execute todas as células sequencialmente.
 
+4. Personalização (Troca de Ativo)
+Para analisar uma empresa diferente, altere a variável ticker no início do código. Você pode usar códigos da NASDAQ, NYSE ou B3 (ex: PETR4.SA para Petrobras).
 
+<img width="461" height="112" alt="Seleção de Ticker" src="https://github.com/user-attachments/assets/956158fb-e2e0-4520-a239-fcfa0617bb40" />
+
+Resultados
+Graças ao uso de Log-Returns, o modelo demonstra uma continuidade orgânica entre o histórico real e a projeção futura. Essa abordagem mitiga o erro de propagação comum em modelos recursivos simples, gerando uma curva de previsão estatisticamente mais estável e visualmente integrada.
