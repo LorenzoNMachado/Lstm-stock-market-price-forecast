@@ -25,3 +25,11 @@ Relatos relevantes incluem credenciais expostas, dependências vulneráveis,
 carregamento inseguro de arquivos externos e riscos em workflows. A previsão é
 educacional e não constitui recomendação financeira. Os scanners e as
 verificações estáticas não constituem garantia de segurança.
+
+## Escopo do CI
+
+O CI valida o JSON dos notebooks, analisa a sintaxe das células do V4 e roda
+Bandit sobre uma exportação temporária das células, sem executar o experimento.
+CodeQL não está configurado porque a implementação do modelo existe somente em
+notebooks; analisar apenas o script auxiliar do CI daria cobertura limitada
+sem alcançar o código principal do experimento.
