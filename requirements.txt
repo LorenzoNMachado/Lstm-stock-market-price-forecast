@@ -1,6 +1,6 @@
 # Python 3.10–3.12 (TensorFlow ainda não suporta todas as versões mais novas)
 tensorflow>=2.16
-numpy>=1.26
+numpy>=2.5.5
 pandas>=2.0
 yfinance>=0.2.40
 scikit-learn>=1.3
