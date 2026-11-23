@@ -1,6 +1,8 @@
 # Previsão de Preços de Ativos com LSTM (Deep Learning)
 
 [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LorenzoNMachado/Lstm-stock-market-price-forecast/blob/main/stock_market_price_forecast_V4.ipynb)
+[![CI](https://github.com/LorenzoNMachado/Lstm-stock-market-price-forecast/actions/workflows/ci.yml/badge.svg)](https://github.com/LorenzoNMachado/Lstm-stock-market-price-forecast/actions/workflows/ci.yml)
+[![License: MIT (code)](https://img.shields.io/badge/license-MIT%20(code)-green.svg)](LICENSE)
 
 > **Aviso de isenção de responsabilidade:** este projeto tem finalidade estritamente educacional. Os resultados e previsões não devem ser usados como conselho financeiro ou recomendação de investimento. Modelos de Machine Learning possuem limitações e riscos significativos.
 
@@ -107,7 +109,12 @@ uv pip install -r requirements.txt
 
 ### Reprodutibilidade
 
-Com a variável `END` definida, os dados baixados ficam salvos em `data/` e as sementes aleatórias são fixas, então o resultado é reproduzível. A execução completa leva alguns minutos em CPU; para ir mais rápido, defina `RUN_WALK_FORWARD = False`.
+Com `END` definido, o período de consulta é fixo e os dados baixados ficam salvos localmente em `data/`. As sementes são fixas, mas revisões da fonte de dados e diferenças entre hardware/backends podem alterar os números; os dados brutos não são versionados. A execução completa leva alguns minutos em CPU; para ir mais rápido, defina `RUN_WALK_FORWARD = False`.
+
+O CI valida o JSON de todos os notebooks, compila as células Python da V4,
+confere a resolução das dependências em Python 3.10–3.12 e executa auditorias
+de dependências e código estático. Não treina a rede nem modifica as saídas
+salvas.
 
 ### Personalização (Troca de Ativo)
 
@@ -168,3 +175,9 @@ As versões anteriores estão na pasta `archive/`.
 **Lorenzo Nakayama Machado**  
 Graduando em Ciência da Computação pela Pontifícia Universidade Católica do Paraná (PUCPR).  
 Interesse em IA, Ciência de Dados e Desenvolvimento Python.
+
+## Licença, dados e segurança
+
+O código original está sob a [licença MIT](LICENSE). Dados do Yahoo Finance e
+gráficos derivados têm termos próprios; consulte [Dados e licenças](DATA_SOURCES.md).
+Para vulnerabilidades, use o fluxo privado descrito em [`SECURITY.md`](SECURITY.md).
